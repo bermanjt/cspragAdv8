@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-import readline 
+import readline
+from sty import fg, bg, ef, rs, RgbFg
 import operator
 
 operators = {
@@ -33,7 +34,11 @@ def calculate(myarg):
 def main():
     while True:
         result = calculate(input("rpn calc> "))
-        print("Result: ", result)
+        if int(result) < 0:
+            print(fg.red + str(result) + fg.rs)
+        else:
+            print(fg.blue + str(result) + fg.rs)
+
 
 if __name__ == '__main__':
     main()
