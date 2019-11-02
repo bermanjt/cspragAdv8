@@ -1,1 +1,1 @@
-pipinstall python-coveralls
+python-coveralls
